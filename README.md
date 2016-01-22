@@ -9,4 +9,4 @@ Once those tools are in place run the following command in the directory contain
 
 `vagrant up`
 
-It will port forward localhost:8888 to the apache port 80 on the vagratn box so to test: http://localhost:8888
+It will port forward localhost:8888 to the apache port 80 on the vagratn box so to test: [http://localhost:8888](http://localhost:8888)
