@@ -19,9 +19,9 @@ Once those tools are in place, from your docker commandline run the following `r
 
 This Shell script performs the following.
 
-`docker build -t jared_test .'
+`docker build -t jared_test .`
 
-'docker run -it --rm -p 8888:8888 --name jared_test_app jared_test`
+`docker run -it --rm -p 8888:8888 --name jared_test_app jared_test`
 
 
 It will port forward local 8888 to the docker container port 8888: 
