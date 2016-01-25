@@ -18,6 +18,7 @@ Once those tools are in place, from your docker commandline run the following `r
 `./run.sh`
 
 This Shell script performs the following.
+
 `docker build -t jared_test .
 docker run -it --rm -p 8888:8888 --name jared_test_app jared_test`
 
