@@ -1,6 +1,7 @@
 # Provisioning Examples
 This repo contains examples for: 
 * Vagrant using Ansible to provision an Apache Server
+* Docker example creates Centos container, copies over `server.js`, installs node/npm and starts the node server.
 
 ## Vagrant Example
 Requires [Vagrant](https://www.vagrantup.com/docs/installation/) to be installed and [Ansible](http://docs.ansible.com/ansible/intro_installation.html)
@@ -12,7 +13,7 @@ Once those tools are in place run the following command in the directory contain
 It will port forward localhost:8888 to the apache port 80 on the vagratn box so to test: [http://localhost:8888](http://localhost:8888)
 
 ## Docker Example
-Requires [Docker](https://docs.docker.com/engine/installation/) to be installed. 
+Requires [Docker](https://docs.docker.com/engine/installation/) to be installed. Currently Dockerfile installs NPM but it is not needed for the server.js as it is a very basic NodeJS server. 
 
 Once those tools are in place, from your docker commandline run the following `run.sh` shell script:
 `./run.sh`
