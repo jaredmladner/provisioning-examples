@@ -13,7 +13,7 @@ Once those tools are in place run the following command in the directory contain
 It will port forward localhost:8888 to the apache port 80 on the vagratn box so to test: [http://localhost:8888](http://localhost:8888)
 
 ## Docker Example
-Requires [Docker](https://docs.docker.com/engine/installation/) to be installed. Currently Dockerfile installs NPM but it is not needed for the server.js as it is a very basic NodeJS server. 
+Requires [Docker](https://docs.docker.com/engine/installation/) to be installed. Currently Dockerfile installs NPM but it is not needed for the server.js as it is a very basic NodeJS server. Based on your environemnt (MAC/Linux/Windows) gain access to your docker enviroment. If running on Mac run `docker-machine start default` then `docker-machine ssh default`.
 
 Once those tools are in place, from your docker commandline run the following `run.sh` shell script:
 `./run.sh`
@@ -26,6 +26,8 @@ docker run -it --rm -p 8888:8888 --name jared_test_app jared_test
 ```
 It will port forward local 8888 to the docker container port 8888: 
 [http://192.168.99.100:8888](http://192.168.99.100:8888)
+
+If using Mac then you can run `docker-machine ls` to see the IP for your docker VM.
 
 ## Cloudformation Example
 Request AWS CLI and your account to be properly configured for AWS Cloudformation/CLI
