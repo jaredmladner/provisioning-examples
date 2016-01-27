@@ -32,9 +32,9 @@ If using Mac then you can run `docker-machine ls` to see the IP for your docker 
 ## Cloudformation Example
 Request AWS CLI and your account to be properly configured for AWS Cloudformation/CLI
 ```
-aws cloudformation create-stack  --stack-name jared-test 
---template-url https://raw.githubusercontent.com/jaredmladner/provisioning-examples/master/cloudformation/jared-test.template 
---parameters  ParameterKey=KeyName,ParameterValue=${your.key.name} ParameterKey=InstanceType,ParameterValue=t1.micro`
+aws cloudformation create-stack  --stack-name jared-test \
+--template-body https://raw.githubusercontent.com/jaredmladner/provisioning-examples/master/cloudformation/jared-test.template \
+--parameters  ParameterKey=KeyName,ParameterValue=${your.key.name} ParameterKey=InstanceType,ParameterValue=t1.micro
 ```
 You can run `aws cloudformation list-stacks` to determine when the stack is complete.
 Once the stack is complete then run the `describe-stacks` to see the final URL: 
