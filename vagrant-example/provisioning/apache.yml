@@ -6,7 +6,7 @@
     domain: example.com
   tasks:
     - name: install apache2
-      apt: name=apache2 update_cache=yes state=latest
+      apt: name=apache2 state=latest
 
     - name: enabled mod_rewrite
       apache2_module: name=rewrite state=present
@@ -34,7 +34,7 @@
         - restart apache2
 
     - name: replace index.html with custom file
-      command: mv /vagrant/provisioning/index.html /var/www/html/index.html 
+      command: cp /vagrant/provisioning/index.html /var/www/html/index.html 
 
   handlers:
     - name: restart apache2
